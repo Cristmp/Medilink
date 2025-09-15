@@ -28,13 +28,15 @@ body {
     justify-content: space-between;
     position: fixed;
     width: 100%;
-    z-index: 1;
+    z-index: 2;
 }
 
 
 .navbar h1{
     font-family: 'Oswald';
     font-size: 2rem;
+    text-decoration: none;
+    color: white;
 }
 
 .li-nav{
@@ -164,7 +166,7 @@ body {
 
 /*FIN DE HOMEPAGE*/
 
-/*COMIENZO DE SECTION 1*/
+/*COMIENZO DE SECTION 1 - Enfermedades*/
 
 .section-1{
     background-color: #f9f6ff;
@@ -215,7 +217,7 @@ body {
 
 /*FIN SECTION 1*/
 
-/*Comienzo de Section 2*/
+/*Comienzo de Section 2 - Noticias*/
 
 .section-2{
     background-color: #f9f6ff;
@@ -260,3 +262,99 @@ body {
     font-family: 'Oswald';
     font-size: 2rem;
 }
+
+/*Final section 2*/
+
+/*INICIO section 3 - Calendario*/
+.section-3{
+    background-color: #fdfbff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.esp-calendario{
+    width: 80%;
+    height: 70%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    align-items: center;
+    padding: 1rem;
+    display: flex;
+}
+
+.calendario{
+    width: 700px;
+    height: 100%;
+    background-color: rgb(241, 240, 255);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.calendario ul{
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.calendario .semana {
+    margin-bottom: 10px;
+}
+
+.calendario .semana li{
+    font-weight: 600;
+}
+
+.calendario ul li{
+    width: calc(100% / 7);
+    font-size: 1.45rem;
+    position: relative;
+}
+
+.calendario .dia li::before{
+    position: absolute;
+    content: '';
+    height: 60px;
+    width: 60px;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s, background 0.3s;
+}
+
+.calendario .dia li:hover:before{
+    background: #d8d2ff;
+}
+
+.calendario .dia li{
+    z-index: 1;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.calendario .dia li.inactive{
+    color: #c4abf1;
+}
+
+.fecha-actual{
+    display: flex;
+    align-items: center;
+    padding: 25px 30px 10px;
+    justify-content: space-between;
+    font-size: 1.45rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.fecha-actual .icons span{
+    height: 38px;
+    width: 38px;
+    background-color: whitesmoke;
+    cursor: pointer;
+}
+
+
