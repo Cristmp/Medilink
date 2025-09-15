@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* NAVBAR*/
+
+.navbar{
+    background-color: rgb(33, 35, 167);
+    max-height: 4rem;
+    height: 4rem;
+    color: white;
+    padding: 5px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+
+.navbar h1{
+    font-family: 'Oswald';
+    font-size: 2rem;
+}
+
+.li-nav{
+    font-family: 'Raleway';
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3rem;
+    color: white;
+}
+
+.li-nav span{
+    list-style: none;
+    color: white;
+}
+
+.li-nav i{
+    color: white;
+}
+
+.social{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.li-social{
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.li-social i{
+    color: white;
+    font-size: 1.5rem;
+}
+
+/*FIN DE NAVBAR*/
+
+/*======>COMIENZO DE SECTIONS<=======*/
+.section{
+    height: 100vh;
+}
+/*Homepage*/
+.homepage{
+    background: linear-gradient(rgba(255, 255, 255, 0.5) 80%, rgb(202, 187, 255));
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    text-align: start;
+    color: black;
+    padding: 0 20px;
+    
+}
+
+.homepage h1{
+   font-family: 'Oswald';
+   font-size: 8rem;
+}
+
+.home-1 img{
+    width: 80%;
+}
+
+.home-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: drop-shadow(8px 6px 6px rgb(92, 62, 112));
+}
+
+.home-2{
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.text-home{
+    font-family: 'Raleway';
+    font-size: 1.3rem;
+    margin-right: 5rem;
+
+}
+
+.btn-home{
+    display: flex;align-items: center;
+    gap: 0.5rem;
+}
+
+.saber-mas{
+    background-color: none;
+    border: 2px solid rgb(33, 35, 167);
+    color: rgb(33, 35, 167);
+    font-family: 'oswald';
+    font-weight: 500;
+    font-size: 2rem;
+    padding: 10px;
+    border-radius: 8px;
+    cursor : pointer;
+}
+
+.saber-mas:hover{
+    background-color: #000000;
+    color: white;
+    border: 2px solid #000000;
+}
+
+.iniciar{
+    background-color: rgb(33, 35, 167);
+    border: none;
+    color: white;
+    font-family: 'raleway';
+    font-weight: 500;
+    font-size: 2rem;
+    padding-inline: 2.5rem;
+    padding-block: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.iniciar:hover{
+    background-color: rgb(14, 15, 100);
+}
+
+/*FIN DE HOMEPAGE*/
+
+/*COMIENZO DE SECTION 1*/
+
+.section-1{
+    background-color: #f9f6ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text-section{
+    width: 80%;
+    display: flex;
+    justify-content: start;
+    margin-top: 2rem;
+}
+
+.enfermedades{
+    font-family: 'Oswald';
+    font-size: 4rem;
+    align-items: start;
+    padding-top: 1rem;
+    color: rgb(33, 35, 167);
+}
+
+.content-section{
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    background-color: rgb(235, 235, 235);
+    width: 80%;
+    height: 100%;
+    max-height: 650px;
+    padding: 1rem;
+    gap: 1rem;
+    border-radius: 10px;
+}
+
+.sick-card{
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/*FIN SECTION 1*/
+
+/*Comienzo de Section 2*/
+
+.section-2{
+    background-color: #f9f6ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.carrusel{
+    width: 80%;
+    height: 70%;
+    background-color: rgb(235, 235, 235);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+.grande{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    height: 100%;
+    width: 100%;
+}
+
+.img-cont{
+    background-color: rgb(226, 226, 226);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    
+}
+
+.Titulo-noticia{
+    font-family: 'Oswald';
+    font-size: 2rem;
+}
