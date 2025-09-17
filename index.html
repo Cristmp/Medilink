@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
     <title>Medilink</title>
 </head>
 <body>
@@ -80,75 +81,363 @@
         </div>
 
         <div class="content-section">
-            <div class="sick-card">
-                <img src="assets/gripe.png">
-                <h2>Gripe</h2>
-                <p>La gripe es una infección vírica que afecta a las vías respiratorias (nariz, garganta y pulmones).
-                Es una enfermedad común, especialmente en invierno, y suele mejorar sin necesidad de tratamiento médico.</p>
+
+            <div class="sick-card" data-enfermedad="dengue">
+                <img src="/assets/Dengue.jpg" alt="">
+                <div class="cont-card">
+                    <h2>Dengue</h2>
+                    <p>El dengue es una enfermedad viral transmitida principalmente por la picadura de mosquitos del género Aedes, en especial el Aedes aegypti</p>
+                </div>
+            </div>
+            
+
+                    <div class="popup" id="popup-dengue">
+                        <div class="overlay"></div>
+                        <div class="popup-content" id="gripe-popup">
+
+                            <h2>Dengue</h2>
+                            <p>El dengue es una enfermedad viral transmitida principalmente por la picadura de mosquitos del género Aedes, 
+                            en especial el Aedes aegypti. Es frecuente en regiones tropicales y subtropicales y constituye un importante
+                             problema de salud pública.</p>
+
+                             <h3>Causas</h3>
+                             <p>Es provocado por el virus del dengue, que tiene cuatro serotipos (DENV-1, DENV-2, DENV-3 y DENV-4). 
+                                La enfermedad se transmite cuando un mosquito infectado pica a una persona sana. No se transmite directamente entre personas. </p>
+
+                            <h3>Sintomas</h3>
+                            <p>
+                                <li>Vómitos.</li>
+                                <li>Náuseas.</li>
+                                <li>Cansancio extremo.</li>
+                            </p>
+                            <button class="cerrar-popup">Cerrar ventana</button>
+                        </div>
+                    </div>
+
+                    <!--======== FIN DE ENFERMEDAD 1 ===========-->
+
+            <div class="sick-card" data-enfermedad="malaria">
+                <img src="assets/malaria.jpg">
+                <div class="cont-card">
+                    <h2>Malaria</h2>
+                    <p>La malaria o paludismo es una enfermedad infecciosa potencialmente mortal causada por parásitos del género Plasmodium</p>
+                </div>
             </div>
 
-            <div class="sick-card">
-                <img src="assets/gripe.png">
-                <h2>Dengue</h2>
-                <p>La gripe es una infección vírica que afecta a las vías respiratorias (nariz, garganta y pulmones).
-                Es una enfermedad común, especialmente en invierno, y suele mejorar sin necesidad de tratamiento médico.</p>
+                    <div class="popup" id="popup-malaria">
+                        <div class="overlay"></div>
+                        <div class="popup-content">
+
+                            <h2>Malaria</h2>
+                            <p>La malaria o paludismo es una enfermedad infecciosa potencialmente mortal causada por parásitos del género Plasmodium, transmitidos por la picadura de mosquitos Anopheles hembra. Es endémica en muchas regiones de África, Asia y América Latina. </p>
+
+                             <h3>Causas</h3>
+                             <p>El contagio ocurre cuando un mosquito Anopheles infectado introduce los parásitos en la sangre humana.
+                                 Los principales responsables son Plasmodium falciparum (el más grave), P. vivax, P. malariae, P. ovale y P. knowlesi.
+                                  No se transmite de persona a persona, salvo en casos excepcionales como transfusiones o uso compartido de agujas. </p>
+
+                            <h3>Sintomas</h3>
+                            <p>
+                                <li>Fiebre intermitente o en ciclos.</li>
+                                <li>Escalofríos intensos</li>
+                                <li>Dolores musculares y fatiga.</li>
+                                <li>Sudoración excesiva.</li>
+                                <li>Dolor de cabeza.</li>
+                            </p>
+                            <button class="cerrar-popup">Cerrar ventana</button>
+                        </div>
+                    </div>
+
+                    <!--======== FIN DE ENFERMEDAD 2 ===========-->
+
+            <div class="sick-card" data-enfermedad="tuberculosis">
+                <img src="assets/tuberculosis.jpg">
+                <div class="cont-card">
+                    <h2>Tuberculosis</h2>
+                    <p>La tuberculosis es una enfermedad infecciosa crónica causada por la bacteria Mycobacterium tuberculosis. 
+                        Afecta principalmente los pulmones</p>
+                </div>
             </div>
 
-            <div class="sick-card">
-                <img src="assets/gripe.png">
-                <h2>Amigdalitis</h2>
-                <p>La gripe es una infección vírica que afecta a las vías respiratorias (nariz, garganta y pulmones).
-                Es una enfermedad común, especialmente en invierno, y suele mejorar sin necesidad de tratamiento médico.</p>
+                    <div class="popup" id="popup-tuberculosis">
+                        <div class="overlay"></div>
+                        <div class="popup-content">
+
+                            <h2>Tuberculosis</h2>
+                            <p>La tuberculosis es una enfermedad infecciosa crónica causada por la bacteria Mycobacterium tuberculosis.
+                                 Afecta principalmente los pulmones, pero también puede comprometer riñones, columna vertebral, cerebro y otros órganos. 
+                                 Es una de las enfermedades más antiguas conocidas y sigue siendo un desafío de salud pública. </p>
+
+                             <h3>Causas</h3>
+                             <p>Se transmite de persona a persona a través del aire, cuando una persona con tuberculosis activa tose, estornuda o habla, 
+                                liberando microgotas que contienen la bacteria. No se transmite por contacto físico, compartir utensilios o besos. 
+                                El riesgo de contagio aumenta en espacios cerrados, mal ventilados y con hacinamiento. </p>
+
+                            <h3>Sintomas</h3>
+                            <p>
+                                <li>Dolor torácico</li>
+                                <li>Fiebre prolongada</li>
+                                <li>Tos con sangre o esputo</li>
+                                <li>Sudoración nocturna abundante</li>
+                            </p>
+                            <button class="cerrar-popup">Cerrar ventana</button>
+                        </div>
+                    </div>
+
+                    <!--======== FIN DE ENFERMEDAD 3 ===========-->
+
+            <div class="sick-card" data-enfermedad="influenza">
+                <img src="assets/influenza.jpg">
+                <div class="cont-card">
+                    <h2>Influenza</h2>
+                    <p>La influenza, también conocida como gripe, es una infección viral aguda que afecta las vías respiratorias superiores e inferiores.
+                         Es causada por los virus de la influenza tipo A, B y C. </p>
+                </div>
             </div>
 
-            <div class="sick-card">
-                <img src="assets/gripe.png">
-                <h2>Osteoporosis</h2>
-                <p>La gripe es una infección vírica que afecta a las vías respiratorias (nariz, garganta y pulmones).
-                Es una enfermedad común, especialmente en invierno, y suele mejorar sin necesidad de tratamiento médico.</p>
+                    <div class="popup" id="popup-influenza">
+                        <div class="overlay"></div>
+                        <div class="popup-content">
+
+                            <h2>Influenza</h2>
+                            <p>La influenza, también conocida como gripe, es una infección viral aguda que afecta las vías respiratorias superiores e inferiores. 
+                                Es causada por los virus de la influenza tipo A, B y C. </p>
+
+                             <h3>Causas</h3>
+                             <p> <b>1.	Contacto con el virus:</b>
+                Al inhalar gotitas respiratorias expulsadas cuando una persona infectada tose, estornuda o habla.
+                Al tocar superficies contaminadas con el virus (puertas, mesas, barandales) y luego tocarse la boca, nariz u ojos. <br> <br>
+                <b>2.	Debilidad del sistema inmunológico:</b> Personas con defensas bajas, niños pequeños, adultos mayores, embarazadas y personas con enfermedades crónicas son más vulnerables. <br> <br>
+                <b>3.	Mutaciones del virus:</b>El virus de la influenza cambia constantemente (por eso se recomienda la vacuna anual). Estas mutaciones permiten que el cuerpo no lo reconozca fácilmente y se enferme.
+
+                            </p>
+
+                            <h3>Sintomas</h3>
+                            <p>
+                                <li>Fiebre alta repentina</li>
+                                <li>Dolor de cabeza</li>
+                                <li>Cansancio extremo</li>
+                                <li>Tos seca</li>
+                            </p>
+                            <button class="cerrar-popup">Cerrar ventana</button>
+                        </div>
+                    </div>
+
+            <div class="sick-card" data-enfermedad="VPH">
+                <img src="assets/papiloma.jpg">
+                <div class="cont-card">
+                    <h2>Virus del papiloma humano (VPH)</h2>
+                    <p>El Virus del Papiloma Humano (VPH) es una infección viral común de transmisión sexual. 
+                        Existen más de 100 tipos de VPH</p>
+                </div>
             </div>
 
-            <div class="sick-card">
-                <img src="assets/gripe.png">
-                <h2>Fiebre</h2>
-                <p>La gripe es una infección vírica que afecta a las vías respiratorias (nariz, garganta y pulmones).
-                Es una enfermedad común, especialmente en invierno, y suele mejorar sin necesidad de tratamiento médico.</p>
+                    <div class="popup" id="popup-VPH">
+                        <div class="overlay"></div>
+                        <div class="popup-content">
+
+                            <h2>Virus del papiloma humano VPH</h2>
+                            <p>El Virus del Papiloma Humano (VPH) es una infección viral común de transmisión sexual. 
+                                Existen más de 100 tipos de VPH, algunos causan verrugas genitales y otros están asociados con cánceres.</p>
+
+                             <h3>Causas</h3>
+                             <p> <b>1.	Transmisión sexual</b>
+                                Tener relaciones sexuales vaginales, anales u orales sin protección con una persona infectada. El virus puede transmitirse aunque no haya síntomas visibles. <br> <br>
+                                 <b>2.	Contacto directo con la piel o mucosas infectadas</b>
+                                El VPH puede pasar por contacto piel con piel en la zona genital, incluso sin penetración completa.</p>
+
+                            <h3>Sintomas</h3>
+                            <p>
+                                <li>Presencia de verrugas genitales o anales</li>
+                                <li>Picazón o incomodidad en el área genital</li>
+                                <li>Sangrado después de las relaciones sexuales</li>
+                            </p>
+                            <button class="cerrar-popup">Cerrar ventana</button>
+                        </div>
+                    </div>
+
+            <div class="sick-card" data-enfermedad="sifilis">
+                <img src="assets/sifilis.jpg">
+                <div class="cont-card">
+                    <h2>Sífilis</h2>
+                    <p>La sífilis es una infección de transmisión sexual causada por la bacteria Treponema pallidum. 
+                        Se caracteriza por desarrollarse en varias fases, </p>
+                </div>
             </div>
 
-            <div class="sick-card">
-                <img src="assets/gripe.png">
-                <h2>Diarrea</h2>
-                <p>La gripe es una infección vírica que afecta a las vías respiratorias (nariz, garganta y pulmones).
-                Es una enfermedad común, especialmente en invierno, y suele mejorar sin necesidad de tratamiento médico.</p>
+                    <div class="popup" id="popup-sifilis">
+                        <div class="overlay"></div>
+                        <div class="popup-content">
+
+                            <h2>Sífilis</h2>
+                            <p>La sífilis es una infección de transmisión sexual causada por la bacteria Treponema pallidum. 
+                                Se caracteriza por desarrollarse en varias fases, incluyendo una inicial con úlcera indolora, 
+                                seguida por signos como erupciones cutáneas, pudiendo permanecer latente y, si no se trata, 
+                                causar daño severo a órganos internos y al sistema nervioso.</p>
+
+                             <h3>Causas</h3>
+                             <p><li>Contacto sexual directo sin protección con alguien infectado, durante relaciones vaginales, anales u orales.</li>
+                                    <li>Transmisión de madre a hijo durante el embarazo o parto (sífilis congénita).</li></p>
+
+                            <h3>Sintomas</h3>
+                            <p>
+                                <li> <b>Fase primaria:</b>úlcera o llaga (chancro) indolora en genitales, boca, ano, u otras zonas por donde entró la bacteria.</li>
+                                <li> <b>Fase secundaria:</b>erupciones en la piel (a veces en palmas de manos o plantas de los pies), fiebre, malestar general, ganglios inflamados, pérdida de cabello, dolores musculares.  </li>
+                                <li> <b>Fase latente:</b>sin síntomas visibles durante largos periodos. </li>
+                                <li> <b>Fase terciaria (tardía):</b> daño a corazón, cerebro, nervios, ojos, huesos u otros órganos; complicaciones graves.</li>
+                            </p>
+                            <button class="cerrar-popup">Cerrar ventana</button>
+                        </div>
+                    </div>
+
+            <div class="sick-card" data-enfermedad="diabetes">
+                <img src="assets/diabetes.jpg">
+                <div class="cont-card">
+                    <h2>Diabetes</h2>
+                    <p>La diabetes mellitus es una enfermedad metabólica crónica en la cual el cuerpo no produce suficiente insulina o no la utiliza adecuadamente.</p>
+                </div>
             </div>
 
-            <div class="sick-card">
-                <img src="assets/gripe.png">
-                <h2>LOL</h2>
-                <p>La gripe es una infección vírica que afecta a las vías respiratorias (nariz, garganta y pulmones).
-                Es una enfermedad común, especialmente en invierno, y suele mejorar sin necesidad de tratamiento médico.</p>
+                    <div class="popup" id="popup-diabetes">
+                        <div class="overlay"></div>
+                        <div class="popup-content">
+
+                            <h2>Diabetes</h2>
+                            <p>La diabetes mellitus es una enfermedad metabólica crónica en la cual el cuerpo no produce suficiente insulina o no la utiliza adecuadamente.
+                                 Esto provoca niveles elevados de glucosa en sangre, lo que con el tiempo puede dañar órganos como los vasos sanguíneos, los nervios, 
+                                 los ojos y los riñones.</p>
+
+                             <h3>Causas</h3>
+                             <p>
+                                <li><b>Diabetes tipo 1:</b> destrucción autoinmune de las células beta del páncreas, lo que reduce la producción de insulina.</li><br>
+                                <li><b>Diabetes tipo 2:</b> resistencia a la insulina; el cuerpo no responde bien a la insulina; frecuentemente asociada con sobrepeso, sedentarismo, y factores genéticos.</li><br>
+                                <li><b>Otros factores:</b> predisposición genética, hábitos de vida poco saludables, algunas condiciones médicas, obesidad.</li>
+                            </p>
+
+                            <h3>Sintomas</h3>
+                            <p>
+                                <li>Sed excesiva y necesidad frecuente de orinar</li>
+                                <li>Fatiga o sensación de debilidad</li>
+                                <li>Pérdida de peso sin proponértelo</li>
+                                <li>Heridas que tardan en sanar, infecciones</li>
+                                <li>Visión borrosa</li>
+                            </p>
+                            <button class="cerrar-popup">Cerrar ventana</button>
+                        </div>
+                    </div>
+
+            <div class="sick-card" data-enfermedad="neumonia">
+                <img src="assets/neumonia.jpg" >
+                <div class="cont-card">
+                    <h2>Neumonía</h2>
+                    <p>La neumonía es una infección que inflama los sacos de aire de los pulmones (alvéolos), que pueden llenarse de líquido o pus, dificultando la respiración.</p>
+                </div>
             </div>
 
-            <div class="sick-card">
-                <img src="assets/gripe.png">
-                <h2>Gripe</h2>
-                <p>La gripe es una infección vírica que afecta a las vías respiratorias (nariz, garganta y pulmones).
-                Es una enfermedad común, especialmente en invierno, y suele mejorar sin necesidad de tratamiento médico.</p>
+                    <div class="popup" id="popup-neumonia">
+                        <div class="overlay"></div>
+                        <div class="popup-content">
+
+                            <h2>Neumonía</h2>
+                            <p>La neumonía es una infección que inflama los sacos de aire de los pulmones (alvéolos), que pueden llenarse de líquido o pus, 
+                                dificultando la respiración. Puede afectar a uno o ambos pulmones y se presenta en personas de cualquier edad, aunque es más grave 
+                                en niños pequeños, adultos mayores y personas con defensas bajas. </p>
+
+                             <h3>Causas</h3>
+                             <p>Puede ser causada por diversos microorganismos: bacterias (principalmente Streptococcus pneumoniae), 
+                                virus (como influenza, SARS-CoV-2, virus respiratorio sincitial) y hongos (en personas inmunodeprimidas). 
+                                También factores como tabaquismo, enfermedades crónicas o exposición a ambientes contaminados aumentan el riesgo. </p>
+
+                            <h3>Sintomas</h3>
+                            <p>
+                                <li>Dolor torácico que empeora al respirar o toser</li>
+                                <li>Escalofríos.</li>
+                                <li>Fiebre.</li>
+                                <li>Dificultad para respirar.</li>
+                                <li>Tos con flema espesa que puede ser amarillenta, verdosa o con sangre.</li>
+                            </p>
+                            <button class="cerrar-popup">Cerrar ventana</button>
+                        </div>
+                    </div>
+
+            <div class="sick-card" data-enfermedad="hipertension">
+                <img src="assets/hipertension.jpg">
+                <div class="cont-card">
+                    <h2>Hipertension arterial</h2>
+                    <p>La hipertensión arterial es una enfermedad crónica caracterizada por un aumento persistente de la presión sanguínea en las arterias, 
+                        lo que obliga al corazón a trabajar más de lo normal.</p>
+                </div>
             </div>
 
-            <div class="sick-card">
-                <img src="assets/gripe.png">
-                <h2>Gripe</h2>
-                <p>La gripe es una infección vírica que afecta a las vías respiratorias (nariz, garganta y pulmones).
-                Es una enfermedad común, especialmente en invierno, y suele mejorar sin necesidad de tratamiento médico.</p>
+                    <div class="popup" id="popup-hipertension">
+                        <div class="overlay"></div>
+                        <div class="popup-content">
+
+                            <h2>Hipertensión arterial</h2>
+                            <p>La hipertensión arterial es una enfermedad crónica caracterizada por un aumento persistente de la presión sanguínea en las arterias,
+                                lo que obliga al corazón a trabajar más de lo normal.</p>
+
+                             <h3>Causas</h3>
+                             <p>
+                                <li><b>1.	Factores genéticos y hereditarios</b> Tener familiares con hipertensión aumenta el riesgo.</li><br>
+                                <li><b>2.	Estilo de vida poco saludable</b> Consumo excesivo de sal (sodio), dieta rica en grasas y baja en frutas y verduras, falta de actividad física, consumo excesivo de alcohol y tabaco.</li><br>
+                                <li><b>3.	Condiciones médicas</b> Obesidad y sobrepeso, diabetes, enfermedades renales crónicas, trastornos hormonales.</li><br>
+                                <li><b>4.	Edad y otros factores</b> La presión tiende a aumentar con la edad, estrés constante, falta de sueño adecuado.</li>
+                             </p>
+
+                            <h3>Sintomas</h3>
+                            <p>
+                                <li>Dolores de cabeza frecuentes.</li>
+                                <li>Mareos</li>
+                                <li>Visión borrosa.</li>
+                            </p>
+                            <button class="cerrar-popup">Cerrar ventana</button>
+                        </div>
+                    </div>
+
+            <div class="sick-card" data-enfermedad="VIH/SIDA">
+                <img src="assets/vih.jpg">
+                <div class="cont-card">
+                    <h2>VIH/SIDA</h2>
+                    <p>El VIH es un virus que ataca el sistema inmunitario, 
+                        mientras que el SIDA es la fase más avanzada de esta infección, 
+                        cuando el sistema inmunitario está muy dañado. </p>
+                </div>
             </div>
 
-            <div class="sick-card">
-                <img src="assets/gripe.png">
-                <h2>Gripe</h2>
-                <p>La gripe es una infección vírica que afecta a las vías respiratorias (nariz, garganta y pulmones).
-                Es una enfermedad común, especialmente en invierno, y suele mejorar sin necesidad de tratamiento médico.</p>
-            </div>
+                    <div class="popup" id="popup-VIH/SIDA">
+                        <div class="overlay"></div>
+                        <div class="popup-content">
+
+                            <h2>VIH/SIDA</h2>
+                            <p>El VIH (Virus de Inmunodeficiencia Humana) es un virus que ataca el sistema inmunitario, 
+                                mientras que el SIDA (Síndrome de Inmunodeficiencia Adquirida) es la fase más avanzada de esta infección, 
+                                cuando el sistema inmunitario está muy dañado. Sin tratamiento, 
+                                el VIH destruye gradualmente las células de defensa del cuerpo (células CD4), lo que lleva a la inmunodeficiencia 
+                                y a un mayor riesgo de infecciones y cánceres graves.</p>
+
+                             <h3>Causas</h3>
+                             <p>
+                                <b>1.	Transmisión del virus</b>
+                                        <li>Relaciones sexuales sin protección con una persona portadora del virus.</li>
+                                        <li>Compartir agujas o jeringas contaminadas.</li>
+                                        <li>Transfusiones de sangre no seguras (en lugares sin control adecuado, aunque hoy es poco común).</li>
+                                        <li>De madre a hijo durante el embarazo, parto o lactancia.</li>
+
+                                <b>2.	Acceso del virus al organismo</b>
+                                <p>El VIH entra en el cuerpo y ataca principalmente a los linfocitos CD4, que son células encargadas de defender al cuerpo contra infecciones.</p>
+                            </p>
+
+                            <h3>Sintomas</h3>
+                            <p>
+                                <li>Fiebre recurrente</li>
+                                <li>Sudores nocturnos</li>
+                                <li>Pérdida de peso inexplicable</li>
+                                <li>Fatiga persistente</li>
+                            </p>
+                            <button class="cerrar-popup">Cerrar ventana</button>
+                        </div>
+                    </div>
         </div>
         
     </section>
@@ -212,20 +501,16 @@
         <div class="esp-calendario">
 
             <div class="calendario">
-                    <div class="fecha-actual">
-                        <p>Septiembre 2025</p>
+                    <div class="header-cal">
+                        <p class="fecha">Septiembre 2025</p>
+
                         <div class="icons">
-
-                            <span id="prev" class="symbol-rounded">
-                                <i class="ri-arrow-left-s-line"></i>
-                            </span>
-
-                            <span id="next" class="symbol-rounded">
-                                <i class="ri-arrow-right-s-line"></i>
-                            </span>
-
+                            <span id="prev" class="material-symbols-rounded">chevron_left</span>
+                            <span id="next" class="material-symbols-rounded">chevron_right</span>
                         </div>
+
                     </div>
+
                     <ul class="semana">
                         <li>Lun</li>
                         <li>Mar</li>
@@ -255,7 +540,7 @@
                         <li>12</li>
                         <li>13</li>
                         <li>14</li>
-                        <li>15</li>
+                        <li class="active">15</li>
                         <li>16</li>
                         <li>17</li>
                         <li>18</li>
@@ -276,24 +561,45 @@
                 </div>
 
                 <div class="eventos">
-                    <h1>Eventos</h1>
-
-                    <div class="cont-eventos">
-                        <h1>Evento 1</h1>
-                    </div>
+                    <!--CARTAS DE TEXTO VAN AQUÍ-->
                 </div>
-                        
-                        
         </div>
 
     </section>
 
     <section class="section-4 section" id="centros">
-        
+
+        <div class="text-section">
+            <h1 class="enfermedades">Centro de salud más cercano</h1>
+        </div>
+
+        <div class="cont-centro">
+            <div class="header-centro">
+                <select name="Departamento" id="">
+                    <option value="departamento1" >Estelí</option>
+                </select>
+                <select name="Municipio" id="">
+                    <option value="municipio1">Condega</option>
+                    <option value="municipio1">Estelí</option>
+                    <option value="municipio1">La Trinidad</option>
+                    <option value="municipio1">Pueblo Nuevo</option>
+                </select>
+                <button>
+                    Buscar
+                </button>
+            </div>
+
+            <div class="cont-centros">
+                <!--CARTAS DE CENTROS DE SALUD VAN AQUÍ-->
+            </div>
+
+        </div>
     </section>
 
     <footer class="footer">
-
+        <p>Página creada por equipo creativo Medilink</p>
     </footer>
+
+    <script src="app.js"></script>
 </body>
 </html>

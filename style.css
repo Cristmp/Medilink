@@ -28,7 +28,7 @@ body {
     justify-content: space-between;
     position: fixed;
     width: 100%;
-    z-index: 2;
+    z-index: 5;
 }
 
 
@@ -127,6 +127,7 @@ body {
 .btn-home{
     display: flex;align-items: center;
     gap: 0.5rem;
+    z-index: 1;
 }
 
 .saber-mas{
@@ -187,17 +188,17 @@ body {
     font-size: 4rem;
     align-items: start;
     padding-top: 1rem;
-    color: rgb(33, 35, 167);
+    color: #2123a7;
 }
 
 .content-section{
     display: grid;
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(5, 1fr);
-    background-color: rgb(235, 235, 235);
+    background-color: rgb(230, 230, 240);
     width: 80%;
     height: 100%;
-    max-height: 650px;
+    max-height: 800px;
     padding: 1rem;
     gap: 1rem;
     border-radius: 10px;
@@ -205,16 +206,120 @@ body {
 
 .sick-card{
     background-color: white;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1;
+    transition: all 0.3s ease;
 }
 
+.cont-card{
+    padding: 10px;
+}
+
+.sick-card:hover{
+    transform: translateY(-5px) ;
+    box-shadow: 0 4px 8px #524e79e7;
+}
+
+.sick-card img{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.popup{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.popup .overlay{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.popup .popup-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+    background-color: #f4f4f4;
+    width: 600px;
+    height: 60%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+    overflow-y: auto;
+    scrollbar-color: #2123a7 #f4f4f4;
+    scrollbar-arrow-color: #2123a7;
+}
+
+.popup .popup-content h2{
+    font-family: 'Oswald';
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.popup .popup-content h3{
+    margin-top: 15px;
+}
+
+.popup .popup-content button{
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    font-family: 'raleway';
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    background-color: rgb(33, 35, 167);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.popup .popup-content button:active{
+    transform: translateY(4px);
+}
+
+
+
+.popup .popup-content button:hover{
+    background-color: rgb(26, 27, 95);
+}
+
+.popup.active {
+    top: 0px;
+    transition: top 0.3s ease;
+    z-index: 3;
+}
+
+.popup.active .overlay{
+    opacity: 1;
+    transition: all 300ms ease-in-out;
+}
+
+.popup.active .popup-content{
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
 /*FIN SECTION 1*/
 
 /*Comienzo de Section 2 - Noticias*/
@@ -281,12 +386,14 @@ body {
     align-items: center;
     padding: 1rem;
     display: flex;
+    justify-content: center;
+    z-index: 1;
 }
 
 .calendario{
     width: 700px;
     height: 100%;
-    background-color: rgb(241, 240, 255);
+    background-color: #f1f0ff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.1);
@@ -326,6 +433,14 @@ body {
     transition: transform 0.3s, background 0.3s;
 }
 
+.dia li.active{
+    color: #ffffff;
+}
+
+.dia li.active::before{
+    background: #a084f5;
+}
+
 .calendario .dia li:hover:before{
     background: #d8d2ff;
 }
@@ -340,21 +455,129 @@ body {
     color: #c4abf1;
 }
 
-.fecha-actual{
+.header-cal{
     display: flex;
     align-items: center;
     padding: 25px 30px 10px;
     justify-content: space-between;
-    font-size: 1.45rem;
+    font-size: 1.80rem;
     font-weight: 600;
     margin-bottom: 30px;
+    background-color: #502eb6;
+    color: white;
 }
 
-.fecha-actual .icons span{
-    height: 38px;
-    width: 38px;
-    background-color: whitesmoke;
+.header-cal .icons span{
+    font-size: 1.80rem;
+    height: 50px;
+    width: 50px;
+    margin: 0 1px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    cursor : pointer;
+    background-color: #0c0e86;
+}
+
+.eventos{
+    margin-left: 2rem;
+    width: 800px;
+    height: 100%;
+    background-color: rgb(241, 240, 255);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+/*FINAL DE SECTION 3*/
+
+/*INICIO DE SECTION 4 - Busqueda de Centros cercanos*/
+.section-4{
+    background-color: #fdfbff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.cont-centro{
+    width: 80%;
+    height: 70%;
+    border: 2px solid#bcbcda;
+    border-radius: 10px;
+    align-items: center;
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.header-centro{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header-centro select{
+    height: 80%;
+    width: 500px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 2rem;
+    color: #505050;
+    background-color: #c5c3dd;
+    border: none;
+}
+
+.header-centro button{
+    height: 80%;
+    width: 500px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 2rem;
+    color: #ffffff;
+    background-color: #502eb5;
+    border: none;
     cursor: pointer;
+    transition: transform 0.2s;
 }
 
+.header-centro button:hover{
+    background-color: #0c0e86;
+}
+
+.header-centro button:active{
+    color: #ffffff;
+    transform: translateY(4px);
+}
+
+.cont-centros{
+    height: 520px;
+    width: 100%;
+    background-color: rgb(219, 218, 235);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+/*FINAL DE SECTION 4*/
+
+/*FOOTER*/
+.footer{
+    background-color: rgb(33, 35, 167);
+    color: white;
+    font-family: 'Raleway';
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 
