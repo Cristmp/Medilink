@@ -543,6 +543,64 @@ position: absolute;
     box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.1);
 }
 
+.text-event{
+    background: linear-gradient( 170deg, rgb(80, 46, 181) 40%, rgb(75, 126, 204));
+    color: white;
+    padding: 25px 30px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.text-event span{
+    font-size: 3rem;
+    opacity: 70%;
+}
+
+.slider-event{
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    height: 450px;
+    gap: 1rem;
+    scrollbar-width: none;
+}
+
+.card-event{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    box-shadow: 2px 4px 8px rgba(62, 65, 194, 0.288);
+    border-radius: 5px;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.fecha-event{
+    background-color: #2123a7;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 100%;
+    margin: 5px;
+}
+
+.info-event {
+ width: 100%;
+ margin-left: 10px;
+}
+
+.info-event h1{
+ font-family: 'Oswald';
+ line-height: 2.5rem;
+}
+
+.icon-event{
+    font-size: 4rem;
+    margin: 5px;
+    color: #0c0e86;
+}
+
 /*FINAL DE SECTION 3*/
 
 /*INICIO DE SECTION 4 - Busqueda de Centros cercanos*/
