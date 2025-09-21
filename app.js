@@ -26,7 +26,35 @@ overlay.forEach(ov => {
 
 
 // Segunda parte funcional de la página, "Carrusel de noticias"
+const slider = document.getElementById("slider")
+const CardNoti = document.querySelectorAll(".card")
+const prevbtn = document.querySelector('.prevbtn')
+const nextbtn = document.querySelector('.nextbtn')
 
+function getScrollAmount(){
+    const Cardnot = cards[0];
+    const style = getComputedStyle(Cardnot);
+    const CardWidth = Cardnot.offsetWidth
+    const gap = parseInt(style.marginRight) ||20 ;
+    return CardWidth + gap;
+}
+
+function updateButtons(){
+    const maxScrollLeft = slider.scrollWidth - slider.clientWidth;
+    prevbtn.style.display = slider.scrollLeft > 0 ? 'block' : 'none';
+    nextbtn.style.display = slider.scrollLeft < maxScrollLeft - 6 ? 'block' : 'none';
+}
+updateButtons();
+
+nextbtn.addEventListener('click', () => {
+    slider.scrollLeft += getScrollAmount();
+    setTimeout(updateButtons, 100);
+})
+
+prevbtn.addEventListener('click', () => {
+    slider.scrollLeft -= getScrollAmount();
+    setTimeout(updateButtons, 100);
+})
 // Tercera parte funcional de la página, "Calendario de eventos"
 
 // Cuarta parte funcional de la página, "Busqueda de Centros de salud"
