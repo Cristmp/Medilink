@@ -60,6 +60,8 @@ const currentDate = document.querySelector('.fecha')
 const diaTag = document.querySelector('.dia')
 const prevNextIcon = document.querySelectorAll(".icons span")
 
+let selectedDays = {};
+
 let date = new Date();
 currYear = date.getFullYear(),
 currMonth = date.getMonth();
@@ -81,7 +83,11 @@ const renderCalendar = () => {
     for (let i = 1; i <= lastDateofMonth; i++){
         let isToday = i === date.getDate() && currMonth === new Date().getMonth() 
                      && currYear === new Date().getFullYear() ? "active" : "";
-        liTag += `<li class="${isToday}">${i}</li>`
+
+        let key = `${currYear}-${currMonth}-${i}`;
+        let isSelected = selectedDays[key] ? "event" : "";
+
+        liTag += `<li class="${isToday} ${isSelected}">${i}</li>`;
     }
 
     for (let i = lastDayofMonth; i < 6; i++){
@@ -90,7 +96,52 @@ const renderCalendar = () => {
 
     currentDate.innerHTML = `${month[currMonth]} ${currYear}`;
     diaTag.innerHTML = liTag;
-}
+
+    const days = diaTag.querySelectorAll("li:not(.inactive)");
+    const eventosContainer = document.getElementById('slider-event')
+
+    eventosContainer.innerHTML = "";
+
+    //Agregar eventos con click - Solo prueba 
+    days.forEach(day => {
+        day.addEventListener("click", () => {
+            let dayNumber = day.textContent;
+            let key = `${currYear}-${currMonth}-${dayNumber}`;
+
+            // Alternar selección
+            if (selectedDays[key]) {
+                delete selectedDays[key];
+                day.classList.remove("event");
+
+                const cardToRemove = eventosContainer.querySelector(`[data-card="${key}"]`);
+                if (cardToRemove) cardToRemove.remove();
+
+            } else {
+                selectedDays[key] = true;
+                day.classList.add("event");
+
+                const card = document.createElement("div");
+                card.classList.add("card-event");
+                card.setAttribute("data-card", key);
+                card.innerHTML = 
+                `<div class="fecha-event">
+                        <h1>${dayNumber}</h1>
+                    </div>
+
+                    <div class="info-event">
+                        <h1>Evento 1</h1>
+                        <p>descripción del evento</p>
+                    </div>
+
+                    <div class="icon-event">
+                        <i class="ri-calendar-event-fill"></i>
+                    </div>`;
+                    eventosContainer.appendChild(card);
+            }
+        });
+
+})}
+
 renderCalendar();
 
 prevNextIcon.forEach(icon => {

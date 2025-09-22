@@ -495,9 +495,21 @@ position: absolute;
     background: #a084f5;
 }
 
+
 .calendario .dia li:hover:before{
     background: #d8d2ff;
 }
+
+
+.dia li.event{
+    color: white;
+}
+
+.dia li.event::before{
+    background: #6441ce;
+}
+
+
 
 .calendario .dia li{
     z-index: 1;
@@ -580,7 +592,12 @@ position: absolute;
 .fecha-event{
     background-color: #2123a7;
     color: white;
-    padding: 10px 20px;
+    width: 10%;
+    height: 50%;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 100%;
     margin: 5px;
 }
