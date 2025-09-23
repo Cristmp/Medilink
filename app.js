@@ -129,7 +129,7 @@ const renderCalendar = () => {
                     </div>
 
                     <div class="info-event">
-                        <h1>Evento 1</h1>
+                        <h1>Evento</h1>
                         <p>descripción del evento</p>
                     </div>
 

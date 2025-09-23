@@ -39,6 +39,14 @@ body {
     color: white;
 }
 
+.navbar img{
+    width: 200px;
+    height: 40px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+
 .li-nav{
     font-family: 'Raleway';
     list-style: none;
@@ -80,6 +88,7 @@ body {
 /*======>COMIENZO DE SECTIONS<=======*/
 .section{
     height: 100vh;
+    padding: 1rem;
 }
 /*Homepage*/
 .homepage{
@@ -167,6 +176,73 @@ body {
 
 /*FIN DE HOMEPAGE*/
 
+/*INICIO ED SABER MÁS*/
+.saber{
+    padding-top: 3rem;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.cont-saber{
+    width: 90%;
+    height: 80%;
+    flex-direction: row;
+    display: flex;
+    background-color: #bcbcda;
+}
+
+.cont-saber img{
+    width: 550px;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.cont-mas{
+    background-color: #e2e4ec;
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 1rem;
+    
+}
+
+.cont-mas h1{
+    font-family: 'Oswald';
+    font-size: 4rem;
+}
+
+.cont-mas p{
+    font-family: 'Raleway';
+    font-size: 1.5rem;
+}
+
+.btn-regresar{
+    background-color: #2123a7;
+    color: white;
+    padding: 1rem;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    margin-top: 5rem;
+    display: flex;
+    align-items: center;
+}
+
+.btn-regresar i{
+    font-size: 2rem;
+}
+
+.btn-regresar:hover{
+    background-color: #111374;
+}
+/*FIN DE SABER MÁS*/
+
 /*COMIENZO DE SECTION 1 - Enfermedades*/
 
 .section-1{
@@ -197,11 +273,13 @@ body {
     grid-template-columns: repeat(5, 1fr);
     background-color: rgb(230, 230, 240);
     width: 80%;
-    height: 100%;
+    height: 700px;
     max-height: 800px;
     padding: 1rem;
     gap: 1rem;
     border-radius: 10px;
+    overflow-y: auto;
+    scrollbar-color: #2123a7 #f4f4f4;
 }
 
 .sick-card{
@@ -574,7 +652,7 @@ position: absolute;
     display: flex;
     flex-direction: column;
     overflow-y: auto;
-    height: 450px;
+    height: 400px;
     gap: 1rem;
     scrollbar-width: none;
 }
@@ -689,9 +767,67 @@ position: absolute;
     height: 520px;
     width: 100%;
     background-color: rgb(219, 218, 235);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    scrollbar-color: #0c0e86 #ffffff;
+    
+}
+
+.card-centros{
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 2px 2px 8px rgb(144, 145, 214);
+}
+
+.card-centros .active{
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 2px 2px 8px rgb(144, 145, 214);
+}
+
+.card-centros img{
+    width: 200px;
+    object-fit: cover;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.text-centro{
+    padding: 20px;
+}
+
+.direccion{
+    display: flex;
+    align-items: center;
+}
+
+.Centro-text h1{
+    margin-right: 20px;
+    font-family: 'Oswald';
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    color: #0c0e86;
+}
+
+.Centro-text i{
+    font-size: 2rem;
+    margin-right: 10px;
+     color: #0c0e86;
+}
+
+.Centro-text p{
+    font-size: 1.5rem;
+    color: #0c0e86;
+    font-weight: 600;
 }
 
 
